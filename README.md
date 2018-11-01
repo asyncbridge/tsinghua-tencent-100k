@@ -231,7 +231,7 @@ sudo pip install matplotlib
 - my-*.ipynb files will be updated. This is because I'm experimenting this dataset.  
 
 ### How to observe TT100K data sample  
-Please run [my-data-show.ipynb](https://github.com/asyncbridge/tsinghua-tencent-100k/blob/master/code/python/my-data-show.ipynb) on Jupyter Notebook.  
+Please run [my-data-show.ipynb](https://github.com/asyncbridge/tsinghua-tencent-100k/blob/master/doc/my-data-show.html) on Jupyter Notebook.  
 
 ### How to deploy the training result of TT100K annotation JSON file  
 After training the dataset, the deployer creates annotation JSON file using with .caffemodel file.    
