@@ -1,4 +1,4 @@
-# Tsinghua-Tencent-100K
+# Tsinghua-Tencent 100K
 
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)
 
@@ -42,6 +42,7 @@ The prerequisites are as follows.
 - CUDA SDK 8.0  
 - cuDNN 6.0  
 - Python 2.7.x  
+- Jupyter Notebook based on Python 2.7.x
 
 ## Installation
 To install Nvidia driver, CUDA and cuDNN, you need to sign-in to Nvidia web site.  
@@ -77,7 +78,7 @@ export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64:$LD_LIBRARY_PATH
 ```
 
 ### Install cuDNN
-- I downlaoded the cuDNN 6.0 version from [cuDNN 6.0](https://developer.nvidia.com/rdp/cudnn-archive).
+- I downloaded the cuDNN 6.0 version from [cuDNN 6.0](https://developer.nvidia.com/rdp/cudnn-archive).
 - Please visit to above link and select "Download cuDNN v6.0 (April 27, 2017), for CUDA 8.0" and then click on "cuDNN v6.0 Library for Linux".
 - The cudnn-8.0-linux-x64-v6.0-tgz file will be downloaded. Please decompress the tgz file and copy cuDNN include and library files to /usr/local/cuda/ directory.
 
@@ -128,13 +129,20 @@ unzip code.zip
 ```
 
 In my case, code.zip is not decompressed well. So I converted code.zip to code.7z in Windows O/S and then it worked well.
+
+Please copy python and script folder's files from my Git to above code/python and code/script directory.  
+
+```Shell
+git clone https://github.com/asyncbridge/tsinghua-tencent-100k.git
+```
+
 You can see below folder structure.  
 
 ```Shell
     |__ code
         |__ caffe
         |__ model
-			|__ snapshots
+            |__ snapshots
             |__ model.caffemodel
             |__ model.prototxt
             |__ solver.prototxt
@@ -145,16 +153,16 @@ You can see below folder structure.
             |__ clean.sh
             |__ compile.sh
             |__ config.sh
-            |__ prepare.sh			
-			|__ train.sh
+            |__ prepare.sh
+	        |__ train.sh
+        |__ python		
+            |__ my-data-show.ipynb	
+            |__ my-deployer.ipynb
+            |__ my-eval-graph.ipynb
+            |__ my-eval.ipynb
         |__ results
-            |__ ours_result_annos.json		
-```
-
-Please copy python and script folder's files from my Git to above code/python and code/script directory.  
-
-```Shell
-git clone https://github.com/asyncbridge/tsinghua-tencent-100k.git
+            |__ ours_result_annos.json
+            |__ ...
 ```
 
 Next, please build Caffe and pycaffe.  
@@ -162,6 +170,17 @@ Next, please build Caffe and pycaffe.
 ```bash
 cd code/script
 ./compile.sh
+```
+
+### Install Jupyter Notebook
+- To evaluate the test result, we need to use Jupyter Notebook.
+- Please install Jupiter Notebook according to guide [Installing the Jupyter Notebook](http://jupyter.org/install)  
+- This benchmark is based on Python 2.7.x and we have to install it as follows.  
+
+If you have Python 2 installed:
+```bash
+python -m pip install --upgrade pip
+python -m pip install jupyter
 ```
 
 ## Data Preparation
@@ -183,22 +202,43 @@ mkdir -p ../../data/lmdb
 ```
 
 ## Training and Evaluation
-- Training  
-After doing data preparation, we can start training process.
+### Training  
+After doing data preparation, we can start the training process.
 
 ```bash
 cd code/script
 ./train.sh
 ```
 
-The train.sh shell file is described as follows. You can also get the training log.
+The train.sh shell file is described as follows. You can also get the training log file.
 
 ```bash
 ../caffe/build/tools/caffe train --solver ../model/solver.prototxt --gpu 0 2>&1 | tee tt100k_training_01.log
 ```
 
-- Evaluation  
-I'm writing...
+### Evaluation  
+- Before evaluation, you need to install Jupyter Notebook.  
+- You need to install python dependencies such as opencv, matplotlib to evaluate the test result.  
+- Please install correct dependencies if you see some errors when running python code on Jupyter Notebook.  
+
+```bash
+sudo pip install opencv-python
+sudo pip install matplotlib
+...
+```
+
+- For details, please refer to [Tsinghua-Tencent 100K Tutorial](https://cg.cs.tsinghua.edu.cn/traffic-sign/tutorial.html)  
+- my-*.ipynb files will be updated. This is because I'm experimenting this dataset.  
+
+### How to observe TT100K data sample  
+Please run [my-data-show.ipynb](https://github.com/asyncbridge/tsinghua-tencent-100k/blob/master/code/python/my-data-show.ipynb) on Jupyter Notebook.  
+
+### How to deploy the training result of TT100K annotation JSON file  
+After training the dataset, the deployer creates annotation JSON file using with .caffemodel file.    
+Please run [my-deployer.ipynb](https://github.com/asyncbridge/tsinghua-tencent-100k/blob/master/code/python/my-deployer.ipynb) on Jupyter Notebook.  
+
+### How to evaluate the annotation JSON file  
+Please run [my-eval.ipynb](https://github.com/asyncbridge/tsinghua-tencent-100k/blob/master/code/python/my-eval.ipynb) or [my-eval-graph.ipynb](https://github.com/asyncbridge/tsinghua-tencent-100k/blob/master/code/python/my-eval-graph.ipynb) on Jupyter Notebook.  
 
 ## License and Citation
 
