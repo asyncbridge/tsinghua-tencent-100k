@@ -232,13 +232,17 @@ sudo pip install matplotlib
 
 ### How to observe TT100K data sample  
 Please run [my-data-show.ipynb](https://github.com/asyncbridge/tsinghua-tencent-100k/blob/master/code/python/my-data-show.ipynb) on Jupyter Notebook.  
+[See my-data-show.ipynb](https://nbviewer.jupyter.org/github/asyncbridge/tsinghua-tencent-100k/blob/master/code/python/my-data-show.ipynb)
 
 ### How to deploy the training result of TT100K annotation JSON file  
 After training the dataset, the deployer creates annotation JSON file using with .caffemodel file.    
 Please run [my-deployer.ipynb](https://github.com/asyncbridge/tsinghua-tencent-100k/blob/master/code/python/my-deployer.ipynb) on Jupyter Notebook.  
+[See my-deployer.ipynb](https://nbviewer.jupyter.org/github/asyncbridge/tsinghua-tencent-100k/blob/master/code/python/my-deployer.ipynb)
 
 ### How to evaluate the annotation JSON file  
 Please run [my-eval.ipynb](https://github.com/asyncbridge/tsinghua-tencent-100k/blob/master/code/python/my-eval.ipynb) or [my-eval-graph.ipynb](https://github.com/asyncbridge/tsinghua-tencent-100k/blob/master/code/python/my-eval-graph.ipynb) on Jupyter Notebook.  
+[See my-eval.ipynb](https://nbviewer.jupyter.org/github/asyncbridge/tsinghua-tencent-100k/blob/master/code/python/my-eval.ipynb)  
+[See my-eval-graph.ipynb](https://nbviewer.jupyter.org/github/asyncbridge/tsinghua-tencent-100k/blob/master/code/python/my-eval-graph.ipynb)
 
 ## License and Citation
 
