@@ -151,6 +151,12 @@ You can see below folder structure.
             |__ ours_result_annos.json		
 ```
 
+Please copy python and script folder's files from my Git to above code/python and code/script directory.  
+
+```Shell
+git clone https://github.com/asyncbridge/tsinghua-tencent-100k.git
+```
+
 Next, please build Caffe and pycaffe.  
 
 ```bash
