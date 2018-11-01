@@ -191,7 +191,7 @@ The train.sh shell file is described as follows. You can also get the training l
 ../caffe/build/tools/caffe train --solver ../model/solver.prototxt --gpu 0 2>&1 | tee tt100k_training_01.log
 ```
 
-- Evaluation
+- Evaluation  
 I'm writing...
 
 ## License and Citation
@@ -209,12 +209,12 @@ It is cited from:
 	
 
 ## References
-[] https://www.cv-foundation.org/openaccess/content_cvpr_2016/html/Zhu_Traffic-Sign_Detection_and_CVPR_2016_paper.html  
-[] https://cg.cs.tsinghua.edu.cn/traffic-sign/  
-[] https://en.wikipedia.org/wiki/CUDA#Supported_GPUs  
-[] https://www.nvidia.com/en-us/geforce/products/10series/geforce-gtx-1080-ti/#specs  
-[] https://gist.github.com/AlexanderFabisch/6d826b62af87e3c0ac6f  
-[] http://mirror.kakao.com/ubuntu-releases/trusty/  
-[] https://www.nvidia.com/download/driverResults.aspx/137276/en-us  
-[] https://developer.nvidia.com/cuda-downloads  
-[] https://developer.nvidia.com/rdp/cudnn-archive  
+- https://www.cv-foundation.org/openaccess/content_cvpr_2016/html/Zhu_Traffic-Sign_Detection_and_CVPR_2016_paper.html  
+- https://cg.cs.tsinghua.edu.cn/traffic-sign/  
+- https://en.wikipedia.org/wiki/CUDA#Supported_GPUs  
+- https://www.nvidia.com/en-us/geforce/products/10series/geforce-gtx-1080-ti/#specs  
+- https://gist.github.com/AlexanderFabisch/6d826b62af87e3c0ac6f  
+- http://mirror.kakao.com/ubuntu-releases/trusty/  
+- https://www.nvidia.com/download/driverResults.aspx/137276/en-us  
+- https://developer.nvidia.com/cuda-downloads  
+- https://developer.nvidia.com/rdp/cudnn-archive  
