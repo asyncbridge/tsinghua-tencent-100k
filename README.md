@@ -199,8 +199,7 @@ unzip data.zip
 
 ```bash
 mkdir -p ../../data/lmdb
-./1_convert_lmdb.sh
-./2_calc_img_mean.sh
+./prepare.sh
 ```
 
 ## Training and Evaluation
