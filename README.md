@@ -3,11 +3,11 @@
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)
 
 Tsinghua-Tencent-100K is a benchmark for traffic-sign detection and classification. It provides 100,000 images containing 30,000 traffic-sign instances.
-It is focused on small object detection in real world. According to the paper, "A typical traffic-sign might be say 80 × 80 pixels, in a 2000 × 2000 pixel image, or just 0.2% of the image."
+It is focused on small object detection in real world. According to the paper, it said "A typical traffic-sign might be say 80 × 80 pixels, in a 2000 × 2000 pixel image, or just 0.2% of the image.".
 It means that the small objects such as traffic-sign occupy the very small proportion in input image.
 
-This benchmark is built by Caffe and Ubuntu 14.04.  
-I summarized how to setup this benchmark and learning/testing the CNN model which is proposed from this paper. I also added some codes for my experiment.
+This benchmark is built by Caffe and installed in Ubuntu 14.04.  
+I summarized how to setup this benchmark and learning/testing the CNN model which is proposed from this paper. I also added some codes for my experiment.  
 
 ## Table of Contents
 * [Requirements: Hardware](#requirements-hardware)
@@ -80,7 +80,7 @@ export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64:$LD_LIBRARY_PATH
 ### Install cuDNN
 - I downloaded the cuDNN 6.0 version from [cuDNN 6.0](https://developer.nvidia.com/rdp/cudnn-archive).
 - Please visit to above link and select "Download cuDNN v6.0 (April 27, 2017), for CUDA 8.0" and then click on "cuDNN v6.0 Library for Linux".
-- The cudnn-8.0-linux-x64-v6.0-tgz file will be downloaded. Please decompress the tgz file and copy cuDNN include and library files to /usr/local/cuda/ directory.
+- The cudnn-8.0-linux-x64-v6.0-tgz file will be downloaded. Please decompress the tgz file and copy cuDNN include and library files to /usr/local/cuda/ directory as follows.
 
 ```bash
 tar -xzvf cudnn-8.0-linux-x64-v6.0.tgz
@@ -128,9 +128,9 @@ wget http://cg.cs.tsinghua.edu.cn/traffic-sign/data_model_code/code.zip
 unzip code.zip
 ```
 
-In my case, code.zip is not decompressed well. So I converted code.zip to code.7z in Windows O/S and then it worked well.
+In my case, code.zip is not decompressed well on my Ubuntu. So I converted code.zip to code.7z in Windows O/S and then it worked well.
 
-Please copy python and script folder's files from my Git to above code/python and code/script directory.  
+Please copy the files in python and script folders from my Git to above code/python and code/script directory.  
 
 ```Shell
 git clone https://github.com/asyncbridge/tsinghua-tencent-100k.git
@@ -141,12 +141,22 @@ You can see below folder structure.
 ```Shell
     |__ code
         |__ caffe
+            |__ ...					
         |__ model
             |__ snapshots
             |__ model.caffemodel
             |__ model.prototxt
             |__ solver.prototxt
             |__ train_val.prototxt
+        |__ python		
+            |__ my-data-show.ipynb	
+            |__ my-deployer.ipynb
+            |__ my-eval-graph.ipynb
+            |__ my-eval.ipynb			
+            |__ ...						
+        |__ results
+            |__ ours_result_annos.json
+            |__ ...			
         |__ script			
             |__ 1_convert_lmdb.sh
             |__ 2_calc_img_mean.sh
@@ -154,15 +164,7 @@ You can see below folder structure.
             |__ compile.sh
             |__ config.sh
             |__ prepare.sh
-	        |__ train.sh
-        |__ python		
-            |__ my-data-show.ipynb	
-            |__ my-deployer.ipynb
-            |__ my-eval-graph.ipynb
-            |__ my-eval.ipynb
-        |__ results
-            |__ ours_result_annos.json
-            |__ ...
+            |__ train.sh
 ```
 
 Next, please build Caffe and pycaffe.  
@@ -203,7 +205,7 @@ mkdir -p ../../data/lmdb
 
 ## Training and Evaluation
 ### Training  
-After doing data preparation, we can start the training process.
+After doing data preparation, we can start the training process.  
 
 ```bash
 cd code/script
@@ -238,7 +240,15 @@ After training the dataset, the deployer creates annotation JSON file using with
 Please run [my-deployer.ipynb](https://github.com/asyncbridge/tsinghua-tencent-100k/blob/master/code/python/my-deployer.ipynb) on Jupyter Notebook.([See my-deployer.ipynb](https://nbviewer.jupyter.org/github/asyncbridge/tsinghua-tencent-100k/blob/master/code/python/my-deployer.ipynb))
 
 ### How to evaluate the annotation JSON file  
-Please run [my-eval.ipynb](https://github.com/asyncbridge/tsinghua-tencent-100k/blob/master/code/python/my-eval.ipynb) or [my-eval-graph.ipynb](https://github.com/asyncbridge/tsinghua-tencent-100k/blob/master/code/python/my-eval-graph.ipynb) on Jupyter Notebook.([See my-eval.ipynb](https://nbviewer.jupyter.org/github/asyncbridge/tsinghua-tencent-100k/blob/master/code/python/my-eval.ipynb), [my-eval-graph.ipynb](https://nbviewer.jupyter.org/github/asyncbridge/tsinghua-tencent-100k/blob/master/code/python/my-eval-graph.ipynb))
+Please run [my-eval.ipynb](https://github.com/asyncbridge/tsinghua-tencent-100k/blob/master/code/python/my-eval.ipynb) or [my-eval-graph.ipynb](https://github.com/asyncbridge/tsinghua-tencent-100k/blob/master/code/python/my-eval-graph.ipynb) on Jupyter Notebook.([See my-eval.ipynb](https://nbviewer.jupyter.org/github/asyncbridge/tsinghua-tencent-100k/blob/master/code/python/my-eval.ipynb), [my-eval-graph.ipynb](https://nbviewer.jupyter.org/github/asyncbridge/tsinghua-tencent-100k/blob/master/code/python/my-eval-graph.ipynb))  
+You can evaluate the pre-created annotation JSON file.  
+
+```Shell
+    |__ code				
+        |__ results
+            |__ ours_result_annos.json
+            |__ ...			
+```
 
 ## License and Citation
 
