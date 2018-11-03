@@ -173,8 +173,9 @@ python -m pip install jupyter
 ```
 
 ## Data Preparation
-- Download TT100K dataset
-Please download the TT100K dataset and decompress zip file. 
+- To download the TT100K dataset, please download the TT100K dataset and decompress the zip file.  
+- Please convert 7z file and decompress again if you face an error when decompressing it. I tried to do this using with 7z in Windows.  
+
 
 ```bash
 cd TT100k
