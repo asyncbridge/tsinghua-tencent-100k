@@ -98,16 +98,14 @@ sudo apt-get install libprotobuf-dev libleveldb-dev libsnappy-dev libopencv-dev 
 sudo apt-get install --no-install-recommends libboost-all-dev
 ```
 
-- BLAS
-I just installed both of them.  
+- BLAS, I just installed both of them.  
 
 ```bash
 sudo apt-get install libatlas-base-dev
 sudo apt-get install libopenblas-dev
 ```
 
-- Python
-I updated python version to 2.7.12.
+- Python, I updated python version to 2.7.12.  
 
 ```bash
 sudo apt-get install python-dev
@@ -119,8 +117,7 @@ sudo apt-get install python-dev
 sudo apt-get install libgflags-dev libgoogle-glog-dev liblmdb-dev
 ```
 
-- Build Caffe and pycaffe  
-Please clone Caffe code from my git as follows.  
+- Build Caffe and pycaffe, please clone Caffe code from my git as follows.  
 
 ```Shell
 git clone https://github.com/asyncbridge/tsinghua-tencent-100k.git
