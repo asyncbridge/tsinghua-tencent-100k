@@ -1,0 +1,49 @@
+iou:0.5, size:[0,400), types:[pl120, ...total 45...], accuracy:0.501403508772, recall:0.555382821609
+iou:0.5, size:[0,32), types:[pl120, ...total 45...], accuracy:0.454071661238, recall:0.238209159262
+iou:0.5, size:[32,96), types:[pl120, ...total 45...], accuracy:0.504725897921, recall:0.728603324237
+iou:0.5, size:[96,400), types:[pl120, ...total 45...], accuracy:0.545986622074, recall:0.856955380577
+iou:0.5, size:[0,400), types:i2, accuracy:0.676470588235, recall:0.323943661972
+iou:0.5, size:[0,400), types:i4, accuracy:0.618421052632, recall:0.61038961039
+iou:0.5, size:[0,400), types:i5, accuracy:0.708502024291, recall:0.694444444444
+iou:0.5, size:[0,400), types:il100, accuracy:0.516129032258, recall:0.410256410256
+iou:0.5, size:[0,400), types:il60, accuracy:0.632768361582, recall:0.8
+iou:0.5, size:[0,400), types:il80, accuracy:0.755102040816, recall:0.385416666667
+iou:0.5, size:[0,400), types:io, accuracy:0.505847953216, recall:0.65037593985
+iou:0.5, size:[0,400), types:ip, accuracy:0.477777777778, recall:0.671875
+iou:0.5, size:[0,400), types:p10, accuracy:0.536585365854, recall:0.505747126437
+iou:0.5, size:[0,400), types:p11, accuracy:0.691823899371, recall:0.442655935614
+iou:0.5, size:[0,400), types:p12, accuracy:0.727272727273, recall:0.484848484848
+iou:0.5, size:[0,400), types:p19, accuracy:0.666666666667, recall:0.787878787879
+iou:0.5, size:[0,400), types:p23, accuracy:0.935897435897, recall:0.708737864078
+iou:0.5, size:[0,400), types:p26, accuracy:0.671296296296, recall:0.599173553719
+iou:0.5, size:[0,400), types:p27, accuracy:0.674418604651, recall:0.604166666667
+iou:0.5, size:[0,400), types:p3, accuracy:0.621621621622, recall:0.396551724138
+iou:0.5, size:[0,400), types:p5, accuracy:0.916666666667, recall:0.72131147541
+iou:0.5, size:[0,400), types:p6, accuracy:0.65625, recall:0.538461538462
+iou:0.5, size:[0,400), types:pg, accuracy:0.443181818182, recall:0.886363636364
+iou:0.5, size:[0,400), types:ph4, accuracy:0.941176470588, recall:0.421052631579
+iou:0.5, size:[0,400), types:ph4.5, accuracy:0.746268656716, recall:0.833333333333
+iou:0.5, size:[0,400), types:ph5, accuracy:0.631578947368, recall:0.307692307692
+iou:0.5, size:[0,400), types:pl100, accuracy:0.811926605505, recall:0.819444444444
+iou:0.5, size:[0,400), types:pl120, accuracy:0.909090909091, recall:0.574712643678
+iou:0.5, size:[0,400), types:pl20, accuracy:0.875, recall:0.25
+iou:0.5, size:[0,400), types:pl30, accuracy:0.727272727273, recall:0.429268292683
+iou:0.5, size:[0,400), types:pl40, accuracy:0.852589641434, recall:0.479820627803
+iou:0.5, size:[0,400), types:pl5, accuracy:0.885135135135, recall:0.651741293532
+iou:0.5, size:[0,400), types:pl50, accuracy:0.7578125, recall:0.285294117647
+iou:0.5, size:[0,400), types:pl60, accuracy:0.857142857143, recall:0.416058394161
+iou:0.5, size:[0,400), types:pl70, accuracy:0.666666666667, recall:0.227272727273
+iou:0.5, size:[0,400), types:pl80, accuracy:0.761904761905, recall:0.404332129964
+iou:0.5, size:[0,400), types:pm20, accuracy:0.928571428571, recall:0.530612244898
+iou:0.5, size:[0,400), types:pm30, accuracy:0.769230769231, recall:0.625
+iou:0.5, size:[0,400), types:pm55, accuracy:0.574074074074, recall:0.794871794872
+iou:0.5, size:[0,400), types:pn, accuracy:0.859939759036, recall:0.589876033058
+iou:0.5, size:[0,400), types:pne, accuracy:0.211185308848, recall:0.766666666667
+iou:0.5, size:[0,400), types:po, accuracy:0.33234421365, recall:0.285714285714
+iou:0.5, size:[0,400), types:pr40, accuracy:0.0988835725678, recall:0.984126984127
+iou:0.5, size:[0,400), types:w13, accuracy:0.357142857143, recall:0.322580645161
+iou:0.5, size:[0,400), types:w32, accuracy:0.30303030303, recall:0.294117647059
+iou:0.5, size:[0,400), types:w55, accuracy:0.697674418605, recall:0.5
+iou:0.5, size:[0,400), types:w57, accuracy:0.376344086022, recall:0.564516129032
+iou:0.5, size:[0,400), types:w59, accuracy:0.525641025641, recall:0.672131147541
+iou:0.5, size:[0,400), types:wo, accuracy:0.164383561644, recall:0.315789473684
