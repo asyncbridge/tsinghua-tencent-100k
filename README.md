@@ -119,8 +119,8 @@ sudo apt-get install python-dev
 sudo apt-get install libgflags-dev libgoogle-glog-dev liblmdb-dev
 ```
 
-- Build Caffe and pycaffe
-Please clone Caffe code from my git as follows.
+- Build Caffe and pycaffe  
+Please clone Caffe code from my git as follows.  
 
 ```Shell
 git clone https://github.com/asyncbridge/tsinghua-tencent-100k.git
