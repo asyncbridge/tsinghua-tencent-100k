@@ -120,17 +120,7 @@ sudo apt-get install libgflags-dev libgoogle-glog-dev liblmdb-dev
 ```
 
 - Build Caffe and pycaffe
-According to [Tsinghua-Tencent 100K Tutorial](https://cg.cs.tsinghua.edu.cn/traffic-sign/tutorial.html), download Caffe code.  
-
-```bash
-mkdir TT100K && cd TT100K
-wget http://cg.cs.tsinghua.edu.cn/traffic-sign/data_model_code/code.zip
-unzip code.zip
-```
-
-In my case, code.zip is not decompressed well on my Ubuntu. So I converted code.zip to code.7z in Windows O/S and then it worked well.
-
-Please copy the files in python and script folders from my Git to above code/python and code/script directory.  
+Please clone Caffe code from my git as follows.
 
 ```Shell
 git clone https://github.com/asyncbridge/tsinghua-tencent-100k.git
