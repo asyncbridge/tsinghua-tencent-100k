@@ -140,6 +140,7 @@ You can see below folder structure.
             |__ my-deployer.ipynb
             |__ my-eval-graph.ipynb
             |__ my-eval.ipynb			
+            |__ my-eval-loss-graph.ipynb						
             |__ ...						
         |__ results
             |__ ours_result_annos.json
@@ -152,6 +153,7 @@ You can see below folder structure.
             |__ config.sh
             |__ prepare.sh
             |__ train.sh
+            |__ TT100K_TRAIN_90000.log
 ```
 
 Next, please build Caffe and pycaffe.  
@@ -236,6 +238,24 @@ You can evaluate the pre-created annotation JSON file.
             |__ ours_result_annos.json
             |__ ...			
 ```
+
+### How to observe TT100K train/test loss graph  
+1) Please run capturing the caffe training log file.
+
+```bash
+../caffe/build/tools/caffe train --solver ../model/solver.prototxt 2>&1 | tee TT100K_TRAIN_90000.log
+```
+
+2) Please run [my-eval-loss-graph.ipynb](https://github.com/asyncbridge/tsinghua-tencent-100k/blob/master/code/python/my-eval-loss-graph.ipynb) on Jupyter Notebook.([See my-eval-loss-graph.ipynb](https://nbviewer.jupyter.org/github/asyncbridge/tsinghua-tencent-100k/blob/master/code/python/my-eval-loss-graph.ipynb))  
+3) Set the log file path and run the Jupyter Notebook file as above.
+
+```python
+def main():
+    files = ['../script/TT100K_TRAIN_90000.log']
+...
+```
+
+![Alt text](https://github.com/asyncbridge/tsinghua-tencent-100k/blob/master/images/train_test_loss_graph.png?raw=true)  
 
 ## License and Citation
 
