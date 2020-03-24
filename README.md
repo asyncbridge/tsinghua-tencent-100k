@@ -1,7 +1,5 @@
 # Tsinghua-Tencent 100K
 
-[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)
-
 Tsinghua-Tencent 100K is a benchmark for traffic-sign detection and classification. It provides 100,000 images containing 30,000 traffic-sign instances.
 It is focused on small object detection in real world. According to the paper, it said "A typical traffic-sign might be say 80 × 80 pixels, in a 2000 × 2000 pixel image, or just 0.2% of the image.".
 It means that the small objects such as traffic-sign occupy the very small proportion in input image.
