@@ -259,8 +259,6 @@ def main():
 
 ## License and Citation
 
-This project is made available under the [MIT License](https://github.com/asyncbridge/tsinghua-tencent-100k/blob/master/LICENSE).
-
 It is cited from:
 
     @InProceedings{Zhe_2016_CVPR,
